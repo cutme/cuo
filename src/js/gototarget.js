@@ -23,8 +23,9 @@ document.addEventListener('DOMContentLoaded',function() {
 	    const moveTo = function() {
 		    const window_pos = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 	
-		    const obj = document.getElementById(src.slice(1, src.length));
-	
+		    //const obj = document.getElementById(src.slice(1, src.length));
+		    const obj = document.getElementById(src.split('#')[1]);
+
 		    if (obj) {
 			    
 			    let offset = 0;
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded',function() {
 		        	offset = 160;
 		        }
 		        
-		        console.log(obj);
+		        
 	            
 	            //document.body.removeAttribute('style');
 		    
@@ -53,7 +54,6 @@ document.addEventListener('DOMContentLoaded',function() {
 	    if (!src) {
 	    	
 	        src = that.getElementsByTagName('a')[0].getAttribute('href');
-	        
 	        
 	        // Check if current page is the same of the link
 	        

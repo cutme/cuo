@@ -9914,17 +9914,17 @@ document.addEventListener('DOMContentLoaded', function () {
     var src = that.getAttribute('href');
 
     var moveTo = function moveTo() {
-      var window_pos = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-      var obj = document.getElementById(src.slice(1, src.length));
+      var window_pos = window.pageYOffset || window.scrollY || document.documentElement.scrollTop; //const obj = document.getElementById(src.slice(1, src.length));
+
+      var obj = document.getElementById(src.split('#')[1]);
 
       if (obj) {
         var offset = 0;
 
         if (src != '#kontakt') {
           offset = 160;
-        }
+        } //document.body.removeAttribute('style');
 
-        console.log(obj); //document.body.removeAttribute('style');
 
         var target = window_pos + obj.getBoundingClientRect().top;
         cutme.Helpers.scrollTo(target, speed_calculate(target), offset); //topbar.classList.add('is-out');
