@@ -1,0 +1,147 @@
+.c-nav {
+	@extend %flex;
+	@extend %flex-y;
+	width: 100%;
+	height: 100%;
+	
+	[class^="icon-"] {
+		@extend %anim;
+		@extend %rel;
+		width: 20px;
+		
+		&:before {
+			@extend %abs;
+			z-index: -1;
+			left: 0; top: 3px;
+		}
+		
+		a {
+			display: block;
+		}
+		
+		&:hover {
+			color: $c-primary;
+		}
+	}
+	
+	a {
+		&:hover {
+			.desktop & {
+				color: $c-primary;
+			}
+		}
+	}
+
+	& > ul {
+		@extend %flex;
+		@extend %flex-y;
+		width: 100%;
+		
+		& > li {
+			margin: 0 15px;
+			
+			&:hover {
+				.desktop & {
+					@media ( min-width: $tablet + 1px ) {
+	            
+			            & > ul {
+				            opacity: 1;
+				            pointer-events: auto;
+				            transform: scale(1) translateY(0);
+			            }
+		            }
+				}
+			}
+			
+			&:nth-child(4) {
+				margin: 0 0 0 auto;
+			}
+			
+			&:last-child {
+				margin-left: 0;
+			}
+			
+			& > a {
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				font-size: rem(17);
+			}
+			
+			
+
+		}
+	}
+	
+	.menu-item-has-children {
+		@extend %rel;
+		
+		&:before {
+			@extend %abs-pseudo;
+			left: -20px; top: 5px;
+			transform: rotate(90deg);
+			font: {
+				family: $icomoon;
+				size: rem(11);
+			}
+			content: "\e900";
+		}
+		
+		& > ul {
+			
+			@media ( min-width: $tablet + 1px ) {
+		        position: absolute;
+	        	left: -50px; top: 98%;
+				background-color: white;
+				//border-left: 1px solid $c-gray-02;
+				//border-right: 1px solid $c-gray-02;
+				//border-bottom: 1px solid $c-gray-02;
+				//border-radius: 0 0 20px 20px;
+				padding: 30px 0 0 0;
+	            pointer-events: none;
+	            opacity: 0;
+		        transform-origin: 50% 0;
+		        transform: scaleY(.75) translateY(-21px);
+		        transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+	        }
+
+			@media ( max-width: $tablet + px ) {
+	        	display: none;
+	        }
+			
+			
+			& > li {
+				@media ( min-width: $tablet + 1px ) {
+					border: {
+						left: 1px solid $c-gray-02;
+						right: 1px solid $c-gray-02;
+					}
+					margin: 0 -1px;
+					padding: 0 50px;
+					
+					&:last-child {
+						padding-bottom: 20px;
+						border-bottom: 1px solid $c-gray-02;
+						border-radius: 0 0 20px 20px;
+					}
+				}
+
+				a {
+					//padding-left: 25px;
+					@extend %rel;
+					white-space: nowrap;
+					font-size: rem(17);
+					
+					&:before {
+						@extend %abs-pseudo;
+						left: -20px; top: 1px;
+						font: {
+							family: $icomoon;
+							size: rem(11);
+						}
+						content: "\e900";
+					}
+				}
+			}
+		}
+	}
+}

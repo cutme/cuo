@@ -1,0 +1,38 @@
+.c-hero {
+	height: 700px;
+	background: {
+		repeat: no-repeat;
+		position: center;
+		size: cover;
+	}
+
+	&--about {
+		background-image: url(../img/photos/top/about.jpg);
+		
+		.o-article {
+			max-width: 920px;
+		}
+		
+		.o-wrap {
+			@extend %flex;
+			@extend %flex-xy;
+			height: 100%;
+		}
+	}
+
+	&--homevideo {
+		background-image: url(../img/photos/home-video.jpg);
+	}
+	
+	&--monika {
+		@extend %flex;
+		@extend %flex-xy;
+		
+		background-image: url(../img/photos/top/monika.jpg);
+		
+		.o-article {
+			max-width: 600px;
+			margin: 0 0 0 auto;
+		}
+	}
+}

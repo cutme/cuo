@@ -1,0 +1,81 @@
+.c-boxes {
+	
+	dl {
+		@extend %flex;
+		
+		dt, dd {
+			width: 50%;
+		}
+		
+		dt {
+			
+			.image {
+				@extend %rel;
+				display: inline-block;
+				
+				&:after {
+					@extend %abs-pseudo;
+					@extend %gradient-3;
+					z-index: -1;
+					bottom: -2px;
+					width: 314px; height: 314px;
+				}
+			}
+		}		
+	}
+	
+	img {
+		max-width: none;
+	}
+	
+	& > {
+		li {
+			margin-bottom: 80px;
+			
+			dd {
+				padding-left: 65px;
+			}
+			
+			dt {
+				padding-right: 30px;
+				
+				direction: rtl;
+				padding-right: 30px;
+				
+				.image {
+					&:after {
+						right: -3px;
+					}
+				}
+			}
+
+			&.is-reverse {
+				
+				dd {
+					padding-right: 30px;
+					padding-left: 0;
+				}
+				
+				dl {
+					flex-direction: row-reverse;
+				}
+				
+				dt {
+					direction: ltr;
+					padding-right: 0;
+
+					.image {
+						&:after {
+							left: -3px;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.o-article {
+		padding-top: 20px;
+		padding-right: 40px;
+	}
+}

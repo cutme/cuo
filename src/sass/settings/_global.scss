@@ -1,0 +1,46 @@
+// Fonts
+
+$sans:              'Roboto', serif;
+$icomoon:           'icomoon';
+$text:		        $sans;
+
+
+
+
+// Font weights
+
+$extralight:        200;
+$light:             300;
+$regular:           400;
+$medium:            500;
+$semibold:          600;
+$bold:              700;
+$extrabold:         800;
+
+
+$z-index: (
+    hamburger:      100,
+	top           : 20,
+	nav           : 50
+);
+
+// Paths
+
+$path_img:          '../img';
+$path_fonts:        '../fonts';
+
+
+
+// Default
+
+$base-font-size:	18;
+$base:				1110;
+
+
+
+// RWD
+
+$tablet:               1024;
+$tablet_portrait:       768;
+$smartphone:			640;
+$smartphone_portrait:	500;

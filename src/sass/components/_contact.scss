@@ -1,0 +1,62 @@
+.c-contact {
+	padding-top: 60px;
+
+	&__details {
+		a[href^="tel:"] {
+			font-size: rem(28);
+		}
+		
+		a[href^="mailto:"] {
+			font-size: rem(16);
+		}
+		
+		address {
+			p {
+				font-size: rem(16);
+			}
+		}
+		
+		.social {
+			@extend %flex;
+	
+			li {
+				&:not(:last-child) {
+					margin-right: 10px;
+				}
+			}
+			
+			a {
+				font-size: rem(16);
+				
+				&:hover {
+					color: $c-primary;
+				}
+			}
+		}
+		
+		.form-label {
+			padding: 0;
+		}
+	}
+	
+	&__map {
+		img {
+			border: 1px solid $c-black-01;
+		}
+		
+		.form-label {
+			padding: 0;
+		}
+	}
+
+	
+	.o-cols {
+		&__item {
+			padding-left: 65px;
+
+			&:first-of-type {
+				width: 475px;
+			}
+		}
+	}
+}

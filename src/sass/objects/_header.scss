@@ -1,0 +1,21 @@
+.o-header {
+	@extend %rel;	
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+	
+	
+	&--up {
+		margin: -80px 0 0 0;
+	}
+
+	&--border {
+		
+		&:after {
+			@extend %abs-pseudo;
+			@extend %abs-x;
+			@extend %gradient-1;
+			bottom: 0;
+			width: 160px; height: 2px;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.o-lead {
+	line-height: 1em;
+
+	&--1 {
+		@extend %lead--1;
+	}
+	
+	&--2 {
+		@extend %lead--2;
+	}
+	
+	&--3 {
+		font: {
+			size: rem(24);
+			weight: $medium;
+		}
+	}
+	
+	&--4 {
+		@extend %lead--4;
+	}
+	
+	&--5 {
+		font: {
+			size: rem(16);
+		}
+	}
+}

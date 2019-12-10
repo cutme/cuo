@@ -1,0 +1,16 @@
+$c-black-01:   #333;
+
+$c-green-01:   #05A081;
+
+$c-gray-01:    #eceff4;
+$c-gray-02:    #e5e5e5;
+
+$c-yellow-01:  #f6a92b;
+
+
+
+$c-primary: $c-yellow-01;
+
+:root {
+  --primary-color: #{$c-primary};
+}

@@ -1,0 +1,72 @@
+html:not(.ie) {
+	&.no-hash {
+	    .anim {
+	    
+	        &--delay1 {
+	            transition-delay: 150ms;
+	        }
+	        
+	        &--delay2 {
+	            transition-delay: 250ms;
+	        }
+	        
+	        &--delay3 {
+	            transition-delay: 350ms;
+	        }
+	        
+	        &--delay4 {
+	            transition-delay: 450ms;
+	        }
+	
+	        transition: all 600ms ease-out;
+	        opacity: 0;
+
+	        
+	        &--up {
+	            transform: translate3d(0, 50px, 0);
+	        }
+	        
+	        &--visible {
+	            transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+	            opacity: 1;
+	        }
+	    }
+	}
+}
+
+.is-hidden {
+    display: none;
+}
+
+
+
+// Text
+
+.aligncenter,
+.text-center {
+    text-align: center;
+    
+    img {
+	    margin: 0 auto;
+    }
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
+
+.u-cover {
+    transition: all 250ms ease-out;
+    opacity: 1;
+    
+    .is-loaded & {
+        opacity: 0;
+    }
+}
+
+
+// Backgrounds
+
+.bg-gray {
+}
+

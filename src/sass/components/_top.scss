@@ -1,0 +1,32 @@
+.c-top {
+	@include z-index(top);
+	position: fixed;
+	left: 0; top: 0;
+	width: 100%;
+	height: 85px;
+	background-color: white;
+	border-bottom: 1px solid $c-gray-02;
+	
+	&:after {
+		@extend %abs-pseudo;
+		@extend %abs-x;
+		z-index: -1;
+		bottom: -52px;
+		width: 540px;
+		height: 52px;
+		background: {
+			image: url(../img/assets/top-curve.png);
+			repeat: no-repeat;
+		}
+	}
+	
+	.o-logo {
+		@extend %abs;
+		@extend %abs-x;
+		top: 12px;
+	}
+	
+	.o-wrap {
+		height: 100%;
+	}
+}

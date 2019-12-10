@@ -1,0 +1,11 @@
+.o-section {
+	padding: 80px 0;
+	
+	&--inside {
+		padding: 80px 95px;
+	}
+	
+	&--pattern {
+		background-image: url(../img/assets/pattern.png);
+	}
+}
