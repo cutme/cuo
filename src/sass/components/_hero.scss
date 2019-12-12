@@ -5,6 +5,10 @@
 		position: center;
 		size: cover;
 	}
+	
+	@media ( max-width: $tablet_portrait + px ) {
+		height: auto;
+	}
 
 	&--about {
 		background-image: url(../img/photos/top/about.jpg);
@@ -17,6 +21,10 @@
 			@extend %flex;
 			@extend %flex-xy;
 			height: 100%;
+			
+			@media ( max-width: $tablet_portrait + px ) {
+				padding-bottom: 20px;
+			}
 		}
 	}
 
@@ -24,15 +32,33 @@
 		background-image: url(../img/photos/home-video.jpg);
 	}
 	
-	&--monika {
+	&--person {
 		@extend %flex;
 		@extend %flex-xy;
-		
 		background-image: url(../img/photos/top/monika.jpg);
 		
+		@media ( max-width: $smartphone_portrait + px ) {
+			background-position: 36% center;
+		}
+		
+		img {
+			@media ( max-width: $tablet_portrait + px ) {
+				width: 200px;
+			}
+		}
+		
 		.o-article {
-			max-width: 600px;
+			width: grid(600);
 			margin: 0 0 0 auto;
+			
+			@media ( max-width: $tablet_portrait + px ) {
+				padding-top: 100px;
+				font-size: rem(14);
+			}
+			
+			@media ( max-width: $smartphone_portrait + px ) {
+				font-size: rem(12);
+			}
 		}
 	}
 }

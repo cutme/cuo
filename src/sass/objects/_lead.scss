@@ -1,5 +1,5 @@
 .o-lead {
-	line-height: 1em;
+	line-height: 1.2em;
 
 	&--1 {
 		@extend %lead--1;
@@ -10,10 +10,7 @@
 	}
 	
 	&--3 {
-		font: {
-			size: rem(24);
-			weight: $medium;
-		}
+		@extend %lead--3;
 	}
 	
 	&--4 {

@@ -9,9 +9,19 @@ document.addEventListener('DOMContentLoaded',function() {
             let src = window.location.hash;
             let obj = document.getElementById( src.slice(1, src.length) );
             
+            let ww = window.innerWidth;
+        	let offset = 160;
+		    
+			if (ww <= 1024) {
+				offset = 140;
+			}
+			
+			if (ww <= 500) {
+				offset = 100;
+			}
             
             let window_pos = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-            let target = window_pos + obj.getBoundingClientRect().top - 160;
+            let target = window_pos + obj.getBoundingClientRect().top - offset;
             
             //setTimeout(function() {
                 cutme.Helpers.scrollTo(target, 1, 0);                

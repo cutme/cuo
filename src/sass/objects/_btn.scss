@@ -16,6 +16,12 @@
     cursor: pointer;
     color: white;
     
+    @media ( max-width: $smartphone_portrait + px ) {
+	    width: 100%;
+	    padding: 0;
+	    font-size: rem(18);
+	}
+    
     &:after {
 	    @extend %abs-pseudo;
 	    @extend %anim;

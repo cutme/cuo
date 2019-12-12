@@ -1,7 +1,12 @@
 .c-meetus {
 
 	&__item {
-			
+		max-width: 370px;
+		
+		@media ( max-width: $smartphone + px ) {
+			margin: 0 auto;
+		}
+
 		figure {
 			img {
 				border-radius: 50%;
@@ -26,9 +31,25 @@
 			@extend %abs-y;
 			font-size: rem(24);
 			color: $c-primary;
+			
+			@media ( max-width: $smartphone_portrait + px ) {
+				top: 20%;
+				width: 40px; height: 40px;
+				background-color: white;
+				font-size: rem(14);
+			}
 
 			&:first-of-type {
 				left: -60px;
+				
+				@media ( max-width: 1300px ) {
+					left: 0;
+				}
+				
+				@media ( max-width: $smartphone_portrait + px ) {
+					left: -20px;	
+					padding-right: 10px;
+				}
 				
 				&:before {
 					display: block;
@@ -38,6 +59,15 @@
 			
 			&:last-of-type {
 				right: -60px;
+				
+				@media ( max-width: 1300px ) {
+					right: 0;
+				}
+				
+				@media ( max-width: $smartphone_portrait + px ) {
+					right: -20px;	
+					padding-left: 10px;
+				}
 			}
 		}
 
@@ -45,11 +75,41 @@
 			&:nth-of-type(odd) {
 				padding-left: 65px;
 				padding-right: 120px;
+				
+				@media ( max-width: $base + 80px ) {
+					padding-right: 40px;
+				}
+				
+				@media ( max-width: $tablet_portrait + px ) {
+					padding-right: 20px;
+				}
+				
+				@media ( max-width: $smartphone + px ) {
+					padding: 0;
+				}
+				
+				.c-meetus__item {
+					@media ( min-width: $smartphone + 1px )  and ( max-width: $base + 80px ) {
+						margin: 0px 0px 0px auto;
+					}					
+				}
 			}
 			
 			&:nth-of-type(even) {
 				padding-left: 120px;
 				padding-right: 65px;
+				
+				@media ( max-width: $base + 80px ) {
+					padding-left: 40px;
+				}
+				
+				@media ( max-width: $tablet_portrait + px ) {
+					padding-left: 20px;	
+				}
+				
+				@media ( max-width: $smartphone + px ) {
+					padding: 0;
+				}
 			}
 		}
 	}

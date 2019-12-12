@@ -1,3 +1,12 @@
 .o-container {
 	padding-top: 85px;
+	overflow: hidden;
+	
+	@media ( max-width: $tablet + px ) {
+		padding-top: 70px;
+	}
+	
+	@media ( max-width: $smartphone_portrait + px ) {
+		padding-top: 40px;
+	}
 }

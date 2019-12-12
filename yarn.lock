@@ -567,10 +567,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@glidejs/glide@^3.4.1":
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/@glidejs/glide/-/glide-3.4.1.tgz#8ad21f3169076e32bbfd75ed0753807662c25e90"
-  integrity sha512-C34AEcK1HjSyxilRToUL54I6KAoodojUbeRlXoruobZuG0eGm8xfDL+3kgkWj7AJK4EZtunSOYfoqMp70eDtwg==
+"@glidejs/glide@3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@glidejs/glide/-/glide-3.4.0.tgz#754b4dec783ad83c6636c059128103e95ba68a39"
+  integrity sha512-yI9VXoi2xmm7Eivo93xqFSE+EiwFhrFMNgWVthJzgpKc+NLiErVdL3SGNUxE7HB4+FgiQXskdDzFpvxzpUbxBw==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -3670,6 +3670,13 @@ gifsicle@^4.0.0:
     execa "^1.0.0"
     logalot "^2.0.0"
 
+glidejs@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/glidejs/-/glidejs-2.1.0.tgz#447b5126cf6e282f20ccdcc99cdd515d21bd8eb1"
+  integrity sha1-RHtRJs9uKC8gzNzJnN1RXSG9jrE=
+  dependencies:
+    jquery "2.2.*"
+
 glightbox@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/glightbox/-/glightbox-2.0.5.tgz#4ea0b2c74c05e99ca95bd69e9114b7b24a267f91"
@@ -4687,6 +4694,11 @@ isurl@^1.0.0-alpha5:
   dependencies:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
+
+jquery@2.2.*:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.2.4.tgz#2c89d6889b5eac522a7eea32c14521559c6cbf02"
+  integrity sha1-LInWiJterFIqfuoywUUhVZxsvwI=
 
 js-base64@^2.1.8:
   version "2.5.1"

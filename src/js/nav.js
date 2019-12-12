@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded',function() {
         const checkWindowWidth = function() {
             ww = window.innerWidth;
 
-            if (ww > 1024) {
+            if (ww > 768) {
 
                 hideMenu();
             }
@@ -83,9 +83,9 @@ document.addEventListener('DOMContentLoaded',function() {
 
         const submenu = function(e) {
         
-            if (ww <= 1024) {
+            if (ww <= 768) {
                 let item = e.currentTarget;
-               
+                               
                 e.stopPropagation();
                 
                 if (item.classList.contains('menu-item-has-children')) {

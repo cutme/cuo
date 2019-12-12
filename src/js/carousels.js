@@ -15,7 +15,12 @@ document.addEventListener('DOMContentLoaded',function() {
             autoplay: false,
             hoverpause: false,
             gap: 0,
-            perView: 2
+            perView: 2,
+            breakpoints: {
+			    640: {
+			      perView: 1
+			    }
+			}
         })
         
         setTimeout(function() {

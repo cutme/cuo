@@ -29,9 +29,19 @@ document.addEventListener('DOMContentLoaded',function() {
 		    if (obj) {
 			    
 			    let offset = 0;
-			    
+			    let ww = window.innerWidth;
+			    			    
 			    if (src != '#kontakt') {
+
 		        	offset = 160;
+				    
+					if (ww <= 1024) {
+						offset = 140;
+					}
+					
+					if (ww <= 500) {
+						offset = 100;
+					}
 		        }
 		        
 		        

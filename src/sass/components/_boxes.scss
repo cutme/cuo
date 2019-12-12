@@ -1,10 +1,20 @@
 .c-boxes {
-	
+	@media ( max-width: $tablet_portrait + px ) {
+		max-width: 668px;
+		margin: 0 auto;
+	}
+
 	dl {
 		@extend %flex;
 		
+		@media ( max-width: $tablet_portrait + px ) {
+			flex-wrap: wrap;
+		}
+		
 		dt, dd {
-			width: 50%;
+			@media ( min-width: $tablet_portrait + 1px ) {
+				width: 50%;
+			}
 		}
 		
 		dt {
@@ -12,35 +22,49 @@
 			.image {
 				@extend %rel;
 				display: inline-block;
-				
+								
 				&:after {
 					@extend %abs-pseudo;
 					@extend %gradient-3;
 					z-index: -1;
-					bottom: -2px;
-					width: 314px; height: 314px;
+					bottom: -3px;
+					width: grid(314, 668); height: grid(314, 668);
+				}
+			}
+			
+			&.with-image {
+				order: 2;
+				
+				& + dd {
+					order: 1;
 				}
 			}
 		}		
 	}
 	
 	img {
-		max-width: none;
+		@media ( min-width: $tablet + 1px ) {
+			max-width: none;
+		}
 	}
-	
+
 	& > {
 		li {
 			margin-bottom: 80px;
 			
 			dd {
-				padding-left: 65px;
+				@media ( min-width: $tablet_portrait + 1px ) {
+					padding-left: grid(65);
+				}
 			}
 			
 			dt {
-				padding-right: 30px;
-				
-				direction: rtl;
-				padding-right: 30px;
+				@media ( min-width: $tablet_portrait + 1px ) {
+					padding-right: grid(30);
+					direction: rtl;
+				}
+
+		
 				
 				.image {
 					&:after {
@@ -48,12 +72,20 @@
 					}
 				}
 			}
+			
+			&:not(.is-reverse) {
+				@media ( min-width: $tablet_portrait + 1px ) and ( max-width: $tablet + px ) {
+					margin: 0 0 0 -20px;
+				}
+			}
 
 			&.is-reverse {
 				
 				dd {
-					padding-right: 30px;
-					padding-left: 0;
+					@media ( min-width: $tablet_portrait + 1px ) {
+						padding-right: 30px;
+						padding-left: 0;
+					}
 				}
 				
 				dl {
@@ -68,6 +100,11 @@
 						&:after {
 							left: -3px;
 						}
+						
+						@media ( min-width: $tablet_portrait + 1px ) and ( max-width: $tablet + px ) {
+							margin: 0 -20px 0 0;
+						}
+
 					}
 				}
 			}
@@ -76,6 +113,13 @@
 	
 	.o-article {
 		padding-top: 20px;
-		padding-right: 40px;
+		
+		@media ( min-width: $smartphone + 1px ) {
+			padding-right: 40px;			
+		}
+	}
+	
+	.c-more {
+		margin-bottom: 40px;
 	}
 }
