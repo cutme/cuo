@@ -33,11 +33,14 @@
 			}
 			
 			&.with-image {
-				order: 2;
+				@media ( max-width: $tablet_portrait + px ) {
+					order: 2;
 				
-				& + dd {
-					order: 1;
+					& + dd {
+						order: 1;
+					}
 				}
+				
 			}
 		}		
 	}
@@ -51,6 +54,10 @@
 	& > {
 		li {
 			margin-bottom: 80px;
+			
+			@media ( max-width: $tablet_portrait + px ) {
+				margin-bottom: 60px;
+			}
 			
 			dd {
 				@media ( min-width: $tablet_portrait + 1px ) {
@@ -120,6 +127,6 @@
 	}
 	
 	.c-more {
-		margin-bottom: 40px;
+		margin-bottom: 60px;
 	}
 }
