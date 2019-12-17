@@ -55,6 +55,10 @@
 		li {
 			margin-bottom: 80px;
 			
+			& > .o-article {
+				margin-top: -80px;
+			}
+			
 			@media ( max-width: $tablet_portrait + px ) {
 				margin-bottom: 60px;
 			}

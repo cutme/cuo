@@ -42,6 +42,18 @@ document.addEventListener('DOMContentLoaded',function() {
 					if (ww <= 500) {
 						offset = 100;
 					}
+		        } else {
+			        
+			        offset = 80;
+			        
+			        if (ww <= 1024) {
+						offset = 60;
+					}
+					
+					if (ww <= 500) {
+						offset = 40;
+					}
+			        
 		        }
 		        
 		        

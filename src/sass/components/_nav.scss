@@ -30,7 +30,7 @@
 		}
 		
 		&:hover {
-			color: $c-primary;
+			//color: $c-primary;
 		}		
 	}
 	
@@ -110,11 +110,13 @@
 				.desktop & {
 					@media ( min-width: $tablet_portrait + 1px ) {
 						
-						& > a {
+						/*
+& > a {
 							&:before {
 								transform: translateY(-50%) rotate(270deg);
 							}
 						}
+*/
 	            
 			            & > ul {
 				            opacity: 1;
@@ -147,6 +149,8 @@
 		@extend %rel;
 		
 		& > a {
+			pointer-events: none;
+
 			&:before {
 				@extend %abs-pseudo;
 				@extend %anim;

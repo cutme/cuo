@@ -35,7 +35,7 @@
 	&--person {
 		@extend %flex;
 		@extend %flex-xy;
-		background-image: url(../img/photos/top/monika.jpg);
+// 		background-image: url(../img/photos/top/monika.jpg);
 		
 		@media ( max-width: $smartphone_portrait + px ) {
 			background-position: 36% center;

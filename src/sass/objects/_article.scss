@@ -8,6 +8,10 @@
 		}
 	}
 	
+	iframe {
+		width: 100% !important;
+	}
+	
 	h2 {
 		@extend %rel;
 		@extend %lead--2;
